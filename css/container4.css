@@ -1,0 +1,45 @@
+.container4{
+    border-radius: 15px;
+    width:100%;
+}
+/* .card-wrapper{
+    background-color: rgb( 255,255, 255, 0.5);
+} */
+/* .swiper-wrapper{
+    background-color: blue;
+}  */
+
+.swiper-slide img{
+    object-fit: cover;
+    /* to make picture responsive to swiper-slide size */
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+
+
+/* swiper pagination */
+.swiper-pagination-bullet{
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background-color: #5372f0;
+}
+
+.swiper-pagination-bullet-active{
+    opacity: 1;
+}
+
+/* .swiper-slide-button{
+     color: #5372f0; 
+} */
+
+.card-wrapper .swiper-wrapper .swiper-slide:active{
+    cursor: grabbing;
+}
+@media(max-width: 768px){
+    .card-wrapper .swiper-slide-button{
+        display: none;
+    }
+}

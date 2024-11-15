@@ -1,0 +1,46 @@
+
+.container2{
+    height: auto;
+    width: calc(100%);
+    background-color: rgb(255,255,255,0.5);
+    border-radius: 15px;
+    padding: 25px;
+    color: rgb(255,255,255);
+    line-height: 35px;
+}
+
+
+.typing-text span{
+    position: relative;
+    color: rgb(80, 67, 75);
+}
+    .typing-text span::before{
+        content: "VBA PROGRAMMER ";
+        animation: words 20s infinite;
+    }
+    .typing-text span::after{
+        content:"";
+        background-color: rgb(243, 240, 240);
+        width:calc(100% + 8px);
+        height:100%;
+        border-left: 3px solid rgb(247, 247, 247);
+        right: -8;
+        animation: cursor 1s infinite ease;
+    }
+        @keyframes cursor {
+            to{
+                border-left:3px solid;
+            }
+        }
+
+        @keyframes words {
+            0%, 33%{
+                content:"VBA PROGRAMMER ";
+            }
+            34%, 67%{
+                content:"FRONT-END DEVELOPER ";
+            }
+            68%, 100%{
+                content:"MORTGAGE BANKER ";
+            }
+        }
