@@ -59,14 +59,14 @@ body{
     .container2{
         top: 0px;
         position: sticky;
-        background-color: rgb(228, 214, 214) !important;
+        background-color: rgb(128, 125, 125) !important;
         grid-area: container2;
-        color: black !important;
+        color: #fff !important;
     }   
         /* CONTAINER 2 ANIMATION */
         .typing-text span{
             position: relative;
-            color: rgb(210,118,177) !important;
+            color: rgb(197, 149, 180) !important;
         }
         .container2 H2{
             display: none;
