@@ -51,7 +51,7 @@ body{
         gap:10px;
     }
     .container1{
-        background-color: rgb(255,255,255,0.5) !important;
+        background-color: rgb(255,255,255,0.2) !important;
         grid-area: container1;
         font-size: 10px !important;
     }
@@ -67,7 +67,7 @@ body{
         /* CONTAINER 2 ANIMATION */
         .typing-text span{
             position: relative;
-            color: rgb(197, 149, 180) !important;
+            color: rgb(139, 48, 108) !important;
         }
         .container2 H2{
             display: none;
