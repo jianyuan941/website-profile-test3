@@ -2,7 +2,7 @@
     border-radius: 15px;
     width: calc(100%);
     height: auto;
-    background-color: rgb( 255,255, 255, 0.2);
+    background-color: rgb( 255,255, 255, 0.5);
 }
 
 .profile-container{
@@ -22,13 +22,6 @@
     object-fit: cover;
 }
 
-/* MBTI */
-.mbti span{
-    padding: 0px 3px 0px 3px;
-    border: #fff solid 2px;
-    border-radius: 15px;
-    cursor: pointer;
-}
 
 /* PERSONAL CONTACT */
 .social-media {
@@ -56,6 +49,5 @@
     border: 2px solid rgb(255,255,255);
     border-radius: 10px;
     padding: 0 5px 0 5px;
-    cursor: pointer;
 
 }

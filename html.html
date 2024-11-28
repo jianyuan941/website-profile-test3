@@ -8,14 +8,18 @@
     <link rel="stylesheet" href="css/container2.css">
     <link rel="stylesheet" href="css/container3.css">
     <link rel="stylesheet" href="css/container4.css">
+    <link rel="stylesheet" href="css/container5.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- whatsapp icon -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="swiper-bundle.min.css">
     <title>Document</title>
 </head>
 <body style="background-image: url('background3.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+
+    <!-- CONTENTS -->
     <div class="container1 personal-information">
         <div class="profile-container">
             <div class="profile-picture"><img src="profile picture/image2.png" alt=""></div>
@@ -85,12 +89,33 @@
             <div class="swiper-button-next swiper-slide-button"></div>
         </div>
     </div>
+    <div class="container5 floating-container">
+        <div class="floating-button">+</div>
+        <div class="element-container">
+            <a href="mortgagecalculator/mortgagecalculator.html" target="_blank" class="item item-1 material-symbols-outlined" style="text-decoration: none;">calculate</a>
+            <a href="blog/blogging.html" target="_blank" class="item item-2 material-symbols-outlined" style="text-decoration: none;">rss_feed</a>
+            <a href="form/form.html" target="_blank" class="item item-3 material-symbols-outlined" style="text-decoration: none;">export_notes</a>
+            <a href="marketing-material/marketingmaterial.html" target="_blank" class="item item-4 material-symbols-outlined" style="text-decoration: none;">linked_services</a>
+        </div>
+        <!-- on and off button -->
+        <script>
+        document.querySelector('.floating-container').addEventListener("click", open);
+        function open(){
+            document.querySelector('.item-1').classList.toggle('box-active');
+            document.querySelector('.item-2').classList.toggle('box-active');
+            document.querySelector('.item-3').classList.toggle('box-active');
+            document.querySelector('.item-4').classList.toggle('box-active');
+        }
+        </script>
+    </div>
+
     
     <!-- Swiper JS -->
     <script src="swiper-bundle.min.js"></script>
 
     <!-- linking custom script  -->
      <script src="javascript/resume.js"></script>
+     
  </body>
  </html>
  
