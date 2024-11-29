@@ -56,6 +56,9 @@ body{
     }
         .profile-picture{
         }
+        .knowledge1 a,.knowledge2 a, .knowledge3 a, .knowledge4 a, .knowledge5 a, .knowledge6 a, .knowledge7 a, .knowledge8 a{
+            color: #fff;
+        }
     .container2{
         top: 0px;
         position: sticky;
