@@ -43,14 +43,14 @@
                     <div class="knowledge-group">SKILLS:</div>
                     <div class="knowledge-set"> 
                         <div class="knowledge">
-                            <SPAN class="knowledge1" onclick="window.open('https://en.wikipedia.org/wiki/HTML');" curser="pointer">Html</SPAN>
-                            <SPAN class ="knowledge2" onclick="window.open('https://en.wikipedia.org/wiki/CSS');" curser="pointer">CSS</SPAN>
-                            <SPAN class="knowledge3" onclick="window.open('https://en.wikipedia.org/wiki/JavaScript');" curser="pointer">JavaScript</SPAN>
-                            <SPAN class="knowledge4" onclick="window.open('https://en.wikipedia.org/wiki/Visual_Basic_(.NET)');" curser="pointer">VBA</SPAN>
-                            <SPAN class="knowledge5" onclick="window.open('https://en.wikipedia.org/wiki/Excel');" curser="pointer">Excel</SPAN>
-                            <SPAN class="knowledge6" onclick="window.open('https://en.wikipedia.org/wiki/Python');" curser="pointer">Python</SPAN>
-                            <SPAN class="knowledge7" onclick="window.open('https://en.wikipedia.org/wiki/Adobe_Acrobat');" curser="pointer">AdobeAcrobat</SPAN>
-                            <SPAN class="knowledge8" onclick="window.open('https://en.wikipedia.org/wiki/Google_Spreadsheet');" curser="pointer">GoogleSpreadsheet</SPAN>
+                            <SPAN class="knowledge1" curser="pointer"><a href="https://en.wikipedia.org/wiki/HTML" target="_blank" style="text-decoration: none;">Html</a></SPAN>
+                            <SPAN class ="knowledge2" curser="pointer"><a href="https://en.wikipedia.org/wiki/CSS" target="_blank" style="text-decoration: none;">CSS</a></SPAN>
+                            <span class="knowledge3" curser="pointer"><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" style="text-decoration: none;">JavaScript</a></span>
+                            <span class="knowledge4" curser="pointer"><a href="https://en.wikipedia.org/wiki/Visual_Basic_(.NET)" target="_blank" style="text-decoration: none;">VBA</a></span>
+                            <span class="knowledge5" curser="pointer"><a href="https://en.wikipedia.org/wiki/Excel" target="_blank" style="text-decoration: none;">Excel</a></span>
+                            <span class="knowledge6" curser="pointer"><a href="https://en.wikipedia.org/wiki/Python" target="_blank" style="text-decoration: none;">Python</a></span>
+                            <span class="knowledge7" curser="pointer"><a href="https://en.wikipedia.org/wiki/Adobe_Acrobat" target="_blank" style="text-decoration: none;">AdobeAcrobat</a></span>
+                            <span class="knowledge8" curser="pointer"><a href="https://en.wikipedia.org/wiki/Google_Spreadsheet" target="_blank" style="text-decoration: none;">GoogleSpreadsheet</a></span></span>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
         </div>
         <!-- on and off button -->
         <script>
-        document.querySelector('.floating-container').addEventListener("click", open);
+        document.querySelector('.floating-button').addEventListener("click", open);
         function open(){
             document.querySelector('.item-1').classList.toggle('box-active');
             document.querySelector('.item-2').classList.toggle('box-active');

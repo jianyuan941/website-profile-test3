@@ -49,5 +49,8 @@
     border: 2px solid rgb(255,255,255);
     border-radius: 10px;
     padding: 0 5px 0 5px;
+}
 
+.knowledge1 a,.knowledge2 a, .knowledge3 a, .knowledge4 a, .knowledge5 a, .knowledge6 a, .knowledge7 a, .knowledge8 a{
+    color: #fff;
 }
