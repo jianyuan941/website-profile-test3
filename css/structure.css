@@ -70,6 +70,9 @@ body{
         border-radius: 0px !important;
     }   
         /* CONTAINER 2 ANIMATION */
+        .typing-text{
+            line-height: 35px !important;
+        }
         .typing-text span{
             position: relative;
             color: rgb(210,118,177) !important;
