@@ -68,7 +68,6 @@ body{
         grid-area: container2;
         color: black !important;
         border-radius: 0px !important;
-        line-height: 10px !important;
     }   
         /* CONTAINER 2 ANIMATION */
         .typing-text span{
