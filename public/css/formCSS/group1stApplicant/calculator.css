@@ -1,0 +1,106 @@
+
+.calculator-container{
+    display: none;
+}
+.calculator-line{
+    display: none;
+    width: calc(100%);
+    
+}
+/* ======================================================================================================= */
+.Applicant-name input{
+    margin-top: 15px;
+    padding: 4px 4px;
+    width: calc(98%);
+}
+.calculator-container {
+    /* display initially flex */
+    margin-top: 10px;
+    margin-left: 10px;
+}
+    .month{
+        margin-top: 18px;
+    }
+        .month p{
+            margin:15px 0 15px 0;
+            display: flex;
+            direction: column;
+            margin-right: 10px;
+            vertical-align: middle;
+            border-color: transparent;
+        }
+    .basic-income-input{
+        width: calc(100%/7);
+        text-align: center;
+        margin-right: 10px;
+    }
+        .basic-income{
+            /* background-color: aquamarine; */
+            width: calc(100%);
+            display: flex;
+            direction: column;
+            vertical-align: middle;
+            border-color: transparent;
+        }
+    .variable-income-input{
+        text-align: center;
+        width: calc(100%/7);
+        margin-right: 10px;
+    }
+        .variable-income{
+            /* background-color: aquamarine; */
+            width: calc(100%);
+            display: flex;
+            direction: column;
+            vertical-align: middle;
+            border-color: transparent;
+        }
+            input {
+                margin-top: 10px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 5px;
+                color: black;
+            }
+    .epf-basic-income-input{
+        text-align: center;
+        width: calc(100%/6);
+        margin-right: 10px;
+    }
+        .basic-epf{
+            /* background-color: aquamarine; */
+            width: calc(100%);
+            display: flex;
+            direction: column;
+            vertical-align: middle;
+            border-color: transparent;
+        }
+    .epf-analysis-container{
+        width: calc(100%/4.7);
+        text-align: center;
+    } 
+        .epf-analysis{
+            margin-top: 9px !important;
+        }
+        .epf-analysis-style {
+            margin:6.5px 0 6.5px 0;
+            line-height:14px;
+            padding: 5px 0 5px 0;
+            border-radius: 5px;
+            background-color: grey;
+            display: flex;
+            flex-direction: column;
+            height:24px;
+            width: calc(100%);
+            text-align: center;
+        }
+    .g-net-income-container{
+        width: calc(100%/8);
+        text-align: center;
+    }
+        .g-net-income1{
+            margin-top: 12px !important;
+        }
+        .g-net-income{
+            text-align: center;
+            margin: 16px 10px 0px 10px;
+        }

@@ -1,0 +1,32 @@
+<div class="calculator" id="basicContainer">
+    <div class="Applicant-name">
+        <input type="text" id="Applicant-name-1" placeholder="1st Applicant" tabindex="1" onblur="alertName()">
+        <input type="text" id="Applicant-born-year-1" placeholder="Born Year" tabindex="1" onblur="bornYearMainApplicant()">
+    </div>
+    <div class="calculator-container">
+        <!-- basicEpf -->
+        <%- include('basicEpf.ejs')%>
+    </div>
+    <hr class="self-employment-line" id="self-employment-line">
+    <div class="self-employment" id="self-employment">
+        <%- include('selfEmployment.ejs')%>
+    </div>
+    
+    <hr class="calculator-line1" id="bonus-line1">
+    <p class="bonus-p1" id="bonus-p1">Bonus Income</p>
+    <div class="bonus-income">
+        <!-- bonus -->
+        <%- include('bonus.ejs')%>
+    </div>
+    <hr class="other-income-line" id="other-income-line">
+    <p class="other-income-p" id="other-income-p" >Other Income</p>
+    <div class="other-income">
+        <!-- otherIncome -->
+        <%- include('otherIncome.ejs')%>
+    </div>
+    <hr class="other-commitment-line" id="other-commitment-line">
+    <p class="other-commitment-p" id="other-commitment-p" >Other Commitment</p>
+    <div class="othercommitment">
+        <%- include('otherCommitment.ejs')%>
+    </div>   
+</div>

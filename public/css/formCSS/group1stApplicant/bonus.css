@@ -1,0 +1,89 @@
+.bonus-income{
+    display: none;
+    margin-top: 10px; 
+    margin-left: 10px;
+}
+#bonus-p1{
+    display: none;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 0px;
+}
+.calculator-line1{
+    display: none;
+    width: calc(100%);
+    
+}
+/* ================================================================================== */
+#bonus-p{
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 0px;
+}
+.bonus-income-income-factor{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+    .bonus-income-income-factor input{
+        margin-left: 10px;
+        padding: var(--input-size);
+        border-color: transparent;
+    }
+    .bonus-year{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+        .bonus-year p{
+            line-height: 10px;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+    .bonus-input{
+        /* margin-top: 20px; */
+        width: calc(100%/2);
+    }
+        .bonus-input input{
+            padding: var(--input-size);
+            border-color: transparent;
+            display: flex;
+            flex-direction: column;
+        }
+    .bonus-income-analysis{
+        width: calc(100%/3);
+        display: flex;
+        flex-direction: column;
+        margin-left: var(--result-margin-left);
+    }
+        .bonus-income-analysis-result-first {
+            margin-top: 10px;
+        }
+        .bonus-income-analysis-result{
+            margin-left: 25px;
+            line-height: var(--result-line-height);
+            vertical-align: middle;
+        }
+    .bonus-analysis-container{
+        display: flex;
+        /* background-color: aquamarine; */
+        border: 1px solid white;
+        border-radius: 15px;
+        padding: 10px;
+        margin-right: 10px;
+        width: calc(100%);
+    }
+        .bonus-wholely-analysis{
+            display: flex;
+            flex-direction: column;
+            width: calc(100%/2);
+            /* background-color: aqua; */
+        }
+        .bonus-wholely-analysis-result{
+            margin-left: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+
+ 

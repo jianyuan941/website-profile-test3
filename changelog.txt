@@ -1,0 +1,4 @@
+12/01/2025 - work until mortgage loan calculation. next to be done:
+1) restructure mortgage loan container
+2) add total interest display
+3) income factor

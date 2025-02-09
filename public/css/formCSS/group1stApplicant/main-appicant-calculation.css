@@ -1,0 +1,65 @@
+.main-applicant-summary-container{
+    display:none;
+    border-radius: 15px;
+    border: white 1px solid;
+    width: calc(100%/2.1);
+    padding: 0 10px 0 10px;
+    margin-bottom: 10px;
+}
+    .main-applicant-summary-container-name{
+        margin: 10px 0 10px 10px;
+    }
+.main-applicant-personal-income-calculation-detail-container{
+    display: flex;
+    padding: 0 10px 0 10px;
+    /* background-color: blue; */
+}
+    .main-applicant-personal-income-calculation-detail{
+        display: flex;
+        flex-direction: column;
+        width: calc(100%/3.5);
+        /* background-color: aquamarine; */
+    }
+        .main-applicant-personal-income-calculation-detail p{
+            margin-top:0px;
+            line-height: 5px;
+        }
+    .main-applicant-personal-income-calculation-amounts{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        /* background-color: aquamarine; */
+        width: calc(100%/6);
+    }
+        .main-applicant-personal-income-calculation-amounts p{
+            margin-top: 0px;
+            line-height: 5px;
+            /* justify-content: center;
+            align-items: center;      */
+            text-align: center;
+        }
+    .main-applicant-others-consideration{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        width: calc(100%/3);
+        /* background-color: aquamarine; */
+    }
+        .main-applicant-others-consideration p{
+            margin-top:0px;
+            line-height: 5px;          
+        }
+    .main-applicant-others-consideration-amount{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        width: calc(100%/6);
+        /* background-color: aquamarine;  */
+        text-align: center;
+    }
+        .main-applicant-others-consideration-amount p{
+            margin-top:0px;
+            line-height: 5px;              
+        }
+
+

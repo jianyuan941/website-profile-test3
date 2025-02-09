@@ -1,0 +1,164 @@
+<p class="income-tax-p" id="income-tax-p">Income Tax</p>
+<div class="incometax-container">
+    <div class="income-tax-years">
+        <p id="income-tax-years-p1"><%= last2Year%></p>
+        <p><%= lastYear%></p>
+    </div>
+    <div class="incometax-amount-container">
+        <input type="text" id="incometax-amount-1year" tabindex="20" placeholder="Enter Amount" onblur="IncomeTaxCalculation()">
+        <input type="text" id="incometax-amount-2year" tabindex="21" placeholder="Enter Amount" onblur="IncomeTaxCalculation()">
+    </div>
+</div>
+<p class="Share-ownership-p" id="Share-ownership-p">Share Ownership</p>
+<div class="bank-statements-container">
+    <div class="share-ownership"> 
+        <div class="total-owned-capital">total owned capital</div>
+        <div class="total-issued-capital">total issued capital</div>
+    </div>
+    <div class="share-ownership-input-container">
+        <input type="text" id="share-ownership-amount" tabindex="22" placeholder="Enter Amount" onblur="ShareOwnershipCalculation()">
+        <input type="text" id="total-issued-capital-amount" tabindex="23" placeholder="Enter Amount" onblur="ShareOwnershipCalculation()">
+    </div>
+    <div class="bank-statement-final-summary share-ownership-summary">
+        <div class="shareownership-title">
+            <p>Income Derived From Income Tax</p>
+            <p>Income Tax Variance</p>
+            <p>Number of Years</p>
+            <p>Share Ownership (%)</p>
+        </div>
+        <div class="shareownership-amount">
+            <p class="net-income-tax">0.00</p>
+            <p class="income-tax-variance">0.00</p>
+            <p class="number-of-year-recognized-net-income-tax">0.00</p>
+            <p class="actual-share-ownership" id="shareholding-income-factor">0.00</p>
+            
+        </div>
+    </div>
+</div>
+<p class="bank-statement-p" id="bank-statement-p">Bank Statements</p>
+<div class="bank-statement-1">
+    <div class="bank-statement-1-months">
+        <p id="bank-statement-1-months-1"><%= monthYearSixMonth %></p>
+        <p><%= monthYearFiveMonth %></p>
+        <p><%= monthYearfourMonth %></p>
+        <p><%= monthYearThreeMonth %></p>
+        <p><%= monthYearTwoMonth %></p>
+        <p><%= monthYearLastMonth %></p>
+    </div>
+    <div class="bank-statement-1-amount-container">Debit
+        <input type="text" tabindex="24" id="DebitBankStatement-1-1" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="27" id="DebitBankStatement-1-2" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="30" id="DebitBankStatement-1-3" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="33" id="DebitBankStatement-1-4" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="36" id="DebitBankStatement-1-5" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="39" id="DebitBankStatement-1-6" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+    </div>
+    <div class="bank-statement-1-amount-container">Credit
+        <input type="text" tabindex="25" id="CreditBankStatement-1-1" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="28" id="CreditBankStatement-1-2" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="31" id="CreditBankStatement-1-3" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="34" id="CreditBankStatement-1-4" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="37" id="CreditBankStatement-1-5" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="40" id="CreditBankStatement-1-6" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+    </div>
+    <div class="bank-statement-1-amount-container">Balance
+        <input type="text" tabindex="26" id="BalanceBankStatement-1-1" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="29" id="BalanceBankStatement-1-2" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="32" id="BalanceBankStatement-1-3" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="35" id="BalanceBankStatement-1-4" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="38" id="BalanceBankStatement-1-5" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="41" id="BalanceBankStatement-1-6" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+    </div>
+    <div class="bank-statement-summmary-container-1">
+        <div class="total-credit-1">total credit</div>
+        <div class="total-credit-amount-1">0.00</div>
+        <div class="total-debit-1">total debit</div>
+        <div class="total-debit-amount-1">0.00</div>
+        <div class="total-balance-1">total balance</div>
+        <div class="total-balance-amount-1">0.00</div>
+    </div>      
+</div>
+<div class="bank-statement-2">
+    <div class="bank-statement-2-months">
+        <p id="bank-statement-2-months-1"><%= monthYearSixMonth %></p>
+        <p><%= monthYearFiveMonth %></p>
+        <p><%= monthYearfourMonth %></p>
+        <p><%= monthYearThreeMonth %></p>
+        <p><%= monthYearTwoMonth %></p>
+        <p><%= monthYearLastMonth %></p>
+    </div>
+    <div class="bank-statement-2-amount-container">Debit
+        <input type="text" tabindex="42" id="DebitBankStatement-2-1" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="45" id="DebitBankStatement-2-2" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="48" id="DebitBankStatement-2-3" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="51" id="DebitBankStatement-2-4" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="54" id="DebitBankStatement-2-5" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="57" id="DebitBankStatement-2-6" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+    </div>
+    <div class="bank-statement-2-amount-container">Credit
+        <input type="text" tabindex="43" id="CreditBankStatement-2-1" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="46" id="CreditBankStatement-2-2" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="49" id="CreditBankStatement-2-3" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="52" id="CreditBankStatement-2-4" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="55" id="CreditBankStatement-2-5" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="58" id="CreditBankStatement-2-6" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+    </div>
+    <div class="bank-statement-2-amount-container">Balance
+        <input type="text" tabindex="44" id="BalanceBankStatement-2-1" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="47" id="BalanceBankStatement-2-2" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="50" id="BalanceBankStatement-2-3" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="53" id="BalanceBankStatement-2-4" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="56" id="BalanceBankStatement-2-5" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="59" id="BalanceBankStatement-2-6" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+    </div>      
+    <div class="bank-statement-summmary-container-2">
+        <div class="total-credit-2">total credit</div>
+        <div class="total-credit-amount-2">0.00</div>
+        <div class="total-debit-2">total debit</div>
+        <div class="total-debit-amount-2">0.00</div>
+        <div class="total-balance-2">total balance</div>
+        <div class="total-balance-amount-2">0.00</div>
+    </div>    
+</div>
+<div class="bank-statement-3">
+    <div class="bank-statement-3-months">
+        <p id="bank-statement-3-months-1"><%= monthYearSixMonth %></p>
+        <p><%= monthYearFiveMonth %></p>
+        <p><%= monthYearfourMonth %></p>
+        <p><%= monthYearThreeMonth %></p>
+        <p><%= monthYearTwoMonth %></p>
+        <p><%= monthYearLastMonth %></p>
+    </div>
+    <div class="bank-statement-3-amount-container">Debit
+        <input type="text" tabindex="60" id="DebitBankStatement-3-1" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="63" id="DebitBankStatement-3-2" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="66" id="DebitBankStatement-3-3" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="69" id="DebitBankStatement-3-4" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="72" id="DebitBankStatement-3-5" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+        <input type="text" tabindex="75" id="DebitBankStatement-3-6" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalDebitAfterShareholdingincomefactor()">
+    </div>
+    <div class="bank-statement-3-amount-container">Credit
+        <input type="text" tabindex="61" id="CreditBankStatement-3-1" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="64" id="CreditBankStatement-3-2" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="67" id="CreditBankStatement-3-3" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="70" id="CreditBankStatement-3-4" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="73" id="CreditBankStatement-3-5" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+        <input type="text" tabindex="76" id="CreditBankStatement-3-6" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalCreditAfterShareholdingincomefactor()">
+    </div>
+    <div class="bank-statement-3-amount-container">Balance
+        <input type="text" tabindex="62" id="BalanceBankStatement-3-1" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="65" id="BalanceBankStatement-3-2" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="68" id="BalanceBankStatement-3-3" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="71" id="BalanceBankStatement-3-4" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="74" id="BalanceBankStatement-3-5" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+        <input type="text" tabindex="77" id="BalanceBankStatement-3-6" placeholder="Enter Amount" onblur="ShareHoldingAlert(); NewtotalBalanceAfterShareholdingincomefactor()">
+    </div>   
+    <div class="bank-statement-summmary-container-3">
+        <div class="total-credit-3">total credit</div>
+        <div class="total-credit-amount-3">0.00</div>
+        <div class="total-debit-3">total debit</div>
+        <div class="total-debit-amount-3">0.00</div>
+        <div class="total-balance-3">total balance</div>
+        <div class="total-balance-amount-3">0.00</div>
+    </div>       
+</div>

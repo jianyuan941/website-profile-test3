@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formCSS/form-structure.css">
+    <link rel="stylesheet" href="css/formCSS/Result.css">
+    <link rel="stylesheet" href="/css/container5.css">
+    <link rel="stylesheet" href="css/formCSS/mortgageSummary.css">
+    <!-- MAIN APPLICANT -->
+    <link rel="stylesheet" href="css/formCSS/group1stApplicant/calculator.css">
+    <link rel="stylesheet" href="css/formCSS/group1stApplicant/bonus.css">
+    <link rel="stylesheet" href="css/formCSS/group1stApplicant/otherincome.css">
+    <link rel="stylesheet" href="css/formCSS/group1stApplicant/otherCommitment.css">
+    <link rel="stylesheet" href="css/formCSS/group1stApplicant/selfEmployment.css">
+    <link rel="stylesheet" href="css/formCSS/group1stApplicant/main-appicant-calculation.css">
+
+    <!-- 2ND APPLICANT -->
+    <link rel="stylesheet" href="css/formCSS/group2ndApplicant/calculator2.css">
+    <link rel="stylesheet" href="css/formCSS/group2ndApplicant/bonus2.css">
+    <link rel="stylesheet" href="css/formCSS/group2ndApplicant/otherincome2.css">
+    <link rel="stylesheet" href="css/formCSS/group2ndApplicant/otherCommitment2.css">
+    <link rel="stylesheet" href="css/formCSS/group2ndApplicant/selfEmployment2.css">
+    <link rel="stylesheet" href="css/formCSS/group2ndApplicant/2nd-appicant-calculation.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- left side of the page -->
+    <div class="applicants-and-type-of-income">
+        <div class="applicants">
+            <div class="applicants-name" id="applicants-nav-name-1" >Applicants Name</div>
+            <div class="applicants-name" id="applicants-nav-name-2" >Applicants Name</div>
+            <!-- <div class="applicants-name" id="applicants-nav-name-3" >Applicants Name</div>
+            <div class="applicants-name" id="applicants-nav-name-4" >Applicants Name</div> -->
+        </div>
+        <div class="type-of-income">
+            <input list="type-of-income-option" id="type-of-income-1" name="type-of-income" clas="type-of-income" placeholder="Type or select" onblur="totalIncomeFromSelfEmployment();filterIncome();triggerMainApplicantSummary()">
+            <input list="type-of-income-option" id="type-of-income-2" name="type-of-income" clas="type-of-income" placeholder="Type or select" onblur="totalIncomeFromSelfEmployment2();trigger2ndApplicantSummary();filterIncome2();">
+            <!-- <input list="type-of-income-option" id="type-of-income-3" name="type-of-income" clas="type-of-income" placeholder="Type or select">
+            <input list="type-of-income-option" id="type-of-income-4" name="type-of-income" clas="type-of-income" placeholder="Type or select"> -->
+            <datalist id="type-of-income-option" class="type-of-income-option">
+                <option value="Basic/Variable">
+                <option value="Self Employment-BS">
+                <option value="Self Employment-IncomeTax">
+            </datalist>
+        </div>
+    </div>
+    <hr class="horizontal-line">
+    <div class="mortgage-summary">
+        <div class="loandetail-description">
+            <div class="mortgage-loan-description">Purchase Price</div>
+            <div class="mortgage-loan-description" id="loanfinancing-description">Mortgage Loan Amount (0.00)</div>
+            <div class="mortgage-loan-description" id="Cash-out-description">Cash Out Amount (0.00)</div>
+            <div class="mortgage-loan-description" id="fec-description">Fec (0.00) </div>
+            <div class="mortgage-loan-description" id="mrtt-description">Mrtt/Mrta (0.00)</div>
+            <div class="mortgage-loan-description">Interest Rate</div>
+            <div class="mortgage-loan-description" id="tenure-description">Tenure (0 months)</div>
+        </div>
+        <div class="loandetail-amount">
+                <input type="text" id="purchase-price-amount" placeholder="Enter Amount" onblur="mortgageloanAmount();installment()">
+                <input type="text" id="mortgage-loan-amount1" placeholder="Enter Amount" onblur="mortgageloanAmount(); installment()">
+                <input type="text" id="Cash-out-amount1" placeholder="Enter Amount" onblur="calculateCashout();installment()">
+                <input type="text" id="Fec" placeholder="Enter Amount" onblur="FecFinancing();installment()">
+                <input type="text" id="insurance" placeholder="Decimal" onblur="MrttFinancing();installment()">
+                <input type="text" id="interest-rate" placeholder="Decimal" onblur="installment()">
+                <input type="text" id="tenure" placeholder="Years" onblur="totalTenure();installment()">
+        </div>
+        <div class="income-factor-description">
+            <p class="Variable-income-Factor-name">Variable Income Factor</p>
+            <p class="income-factor-description-layout net-income-factor-name">Net Income Factor</p>
+            <p class="income-factor-description-layout Bonus-Income-Factor-name">Bonus Income Factor</p>
+            <p class="income-factor-description-layout Income-Tax-Factor-name">Income Tax Factor</p>
+            <p class="income-factor-description-layout Bank-Statement-Factor-name">Bank Statement Factor</p>
+        </div>
+        <div class="income-factors">
+            <input type="text" id ="variable-income-factor" placeholder="Use Decimal" tabindex="" value="0.8" onblur="calculateAverage();calculateAverage2();averageVariableIncome();averageVariableIncome2()">
+            <input type="text" id ="net-income-factor" placeholder="Use Decimal" tabindex="" value ="0.85" onblur="calculateAverage();calculateAverage2()">
+            <input type="text" id ="bonus-income-factor" placeholder="Use Decimal" tabindex="" value ="0.8" onblur="bonusincome();bonusincome2()">
+            <input type="text" id ="Income-Tax-factor" placeholder="Use Decimal" tabindex="" value ="0.8" onblur="IncomeTaxCalculation();IncomeTaxCalculation2()">
+            <input type="text" id ="Bank-Statement-Factor" placeholder="Use Decimal" tabindex="" value ="0.1" onblur="NewtotalDebitAfterShareholdingincomefactor();NewtotalDebitAfterShareholdingincomefactor2();NewtotalCreditAfterShareholdingincomefactor();NewtotalCreditAfterShareholdingincomefactor2();NewtotalBalanceAfterShareholdingincomefactor();NewtotalBalanceAfterShareholdingincomefactor2()">
+        </div>
+    </div> 
+    <hr class="horizontal-line">
+    <!-- Mortgage-description-and-analyzation -->
+     <h1>Analyzation</h1>
+     <div class="mortgage-summary-and-analyzation">
+        <div class="mortgage-summary-and-analyzation-description">
+            <p class="monthly-installment-description">Monthly Installment</p>
+            <p class="total-interest-charges-description">Total Interest Charges</p>
+            <p class="result-and-mortgage-description">Total Gross Income</p>
+            <p class="total-net-income-description">Total Net Income</p>
+            <p class="total-net-disposable-income-description">NDI</p>
+            <p class="DSR-calculation-description">DSRR calculation</p>
+        </div>
+        <div class="mortgage-summary-and-analyzation-result">
+            <p class="monthly-installment">0.00</p>
+            <p class="total-interest-charges ">0.00</p>
+            <p class="mortgage-summary-and-analyzation-result-layout result total-gross-income">0.00</p>
+            <p class="total-net-income">0.00</p>
+            <p class="total-net-disposable-income">0.00</p>
+            <p class="DSR-calculation">0.00</p>
+        </div>
+     </div>
+     <!-- 1st Applicant Summary Personal calculatin -->
+      <div class="main-applicant-summary-container"> <!-- link to main-appicant-calculation.css -->
+          <h1 class="main-applicant-summary-container-name">Main Applicant Summary</h1>
+          <div class="main-applicant-personal-income-calculation-detail-container">
+              <div class="main-applicant-personal-income-calculation-detail">
+                <p class="main-applicant-gross-income">Gross Income from employment</p> 
+                <p class="main-applicant-net-income">Net Income from employment</p>
+                <p class="main-applicant-bonus-income">Bonus Income</p>
+                <p class="main-applicant-self-employment-income">Business Income</p>
+                <p class="main-applicant-other-income">Other Income</p>
+                <p class="main-applicant-total-income1">Total Income</p>
+                <p class="main-applicant-total-commitment">Total Commitment</p>
+              </div>
+              <div class="main-applicant-personal-income-calculation-amounts">
+                <p class="main-applicant-gross-income-amount">0.00</p>
+                <p class="main-app-all-income main-applicant-net-income-amount">0.00</p>
+                <p class="main-app-all-income main-applicant-net-bonus-amount">0.00</p>
+                <p class="main-app-all-income main-applicant-self-employment-income-amount">0.00</p>
+                <p class="main-app-all-income main-applicant-other-income-amount">0.00</p>
+                <p class="main-applicant-total-amount">0.00</p>
+                <p class="main-applicant-total-commitment-amount">0.00</p>
+              </div>
+              <div class="main-applicant-others-consideration">
+                <p class="loan-commitment-spread-to-applicant">Loan installment Per Applicant</p>
+                <p class="debt-service-ratio-per-applicant-1">Debt Service Ratio Per Applicant</p>
+                <p class="net-disposable-income-before-loan-applicant-1">Net Disposable Income (before loan)</p>
+                <p class="net-disposable-income-after-loan-applicant-1">Net Disposable Income (after loan)</p>
+              </div>
+              <div class="main-applicant-others-consideration-amount">
+                <p class="loan-commitment-spread-to-applicant-amount">0.00</p>
+                <p class="debt-service-ratio-per-applicant-1-amount">0.00</p>
+                <p class="net-disposable-income-before-loan-applicant-1-amount">0.00</p>
+                <p class="net-disposable-income-after-loan-applicant-1-amount">0.00</p>
+              </div>
+          </div>
+      </div>
+           <!-- 2nd Applicant Summary Personal calculatin -->
+           <div class="Sec-applicant-summary-container"> <!-- link to main-appicant-calculation.css -->
+            <h1 class="Sec-applicant-summary-container-name">2nd Applicant Summary</h1>
+            <div class="Sec-applicant-personal-income-calculation-detail-container">
+                <div class="Sec-applicant-personal-income-calculation-detail">
+                  <p class="Sec-applicant-gross-income">Gross Income from employment</p> 
+                  <p class="Sec-applicant-net-income">Net Income from employment</p>
+                  <p class="Sec-applicant-bonus-income">Bonus Income</p>
+                  <p class="Sec-applicant-self-employment-income">Business Income</p>
+                  <p class="Sec-applicant-other-income">Other Income</p>
+                  <p class="Sec-applicant-total-income1">Total Income</p>
+                  <p class="Sec-applicant-total-commitment">Total Commitment</p>
+                </div>
+                <div class="Sec-applicant-personal-income-calculation-amounts">
+                  <p class="Sec-applicant-gross-income-amount">0.00</p>
+                  <p class="Sec-app-all-income Sec-applicant-net-income-amount">0.00</p>
+                  <p class="Sec-app-all-income Sec-applicant-net-bonus-amount">0.00</p>
+                  <p class="Sec-app-all-income Sec-applicant-self-employment-income-amount">0.00</p>
+                  <p class="Sec-app-all-income Sec-applicant-other-income-amount">0.00</p>
+                  <p class="Sec-applicant-total-amount">0.00</p>
+                  <p class="Sec-applicant-total-commitment-amount">0.00</p>
+                </div>
+                <div class="Sec-applicant-others-consideration">
+                  <p class="Sec-loan-commitment-spread-to-applicant">Loan installment Per Applicant</p>
+                  <p class="Sec-debt-service-ratio-per-applicant-1">Debt Service Ratio Per Applicant</p>
+                  <p class="Sec-net-disposable-income-before-loan-applicant-1">Net Disposable Income (before loan)</p>
+                  <p class="Sec-net-disposable-income-after-loan-applicant-1">Net Disposable Income (after loan)</p>
+                </div>
+                <div class="Sec-applicant-others-consideration-amount">
+                  <p class="Sec-loan-commitment-spread-to-applicant-amount">0.00</p>
+                  <p class="Sec-debt-service-ratio-per-applicant-1-amount">0.00</p>
+                  <p class="Sec-net-disposable-income-before-loan-applicant-1-amount">0.00</p>
+                  <p class="Sec-net-disposable-income-after-loan-applicant-1-amount">0.00</p>
+                </div>
+            </div>
+        </div>
+
+    <hr class="vertical-line">
+    <!-- right side of the page -->
+     <!-- 1ST APPLICANT -->
+     <%- include('calculator_Path/MainApplicant/1main.ejs')%>
+    <!-- 2ND APPLICANT -->
+    <div class="basicContainer2" id="basicContainer2"> 
+        <div class="Applicant-name">
+            <input type="text" id="Applicant-name-2" placeholder="2nd Applicant" tabindex="1" onblur="alertName2()">
+            <input type="text" id="Applicant-born-year-2" placeholder="Born Year" tabindex="1" onblur="bornYearMainApplicant2()">
+        </div>
+        <div class="calculator-container2"><!--@-->
+            <!-- basicEpf -->
+            <%- include('calculator_Path/2ndApplicant/basicEpf.ejs')%>
+        </div>
+        <hr class="self-employment-line2" id="self-employment-line2">
+        <div class="self-employment2" id="self-employment2">
+            <%- include('calculator_Path/2ndApplicant/selfEmployment.ejs')%>
+        </div>
+        
+        <hr class="calculator-line2" id="bonus-line2">
+        <p class="bonus-p2" id="bonus-p2">Bonus Income</p> <!--@-->
+        <div class="bonus-income2"><!--@-->
+            <!-- bonus -->
+            <%- include('calculator_Path/2ndApplicant/bonus.ejs')%>
+        </div>
+        <hr class="other-income-line2" id="other-income-line2">
+        <p class="other-income-p2" id="other-income-p2" >Other Income</p>
+        <div class="other-income2">
+            <!-- otherIncome -->
+            <%- include('calculator_Path/2ndApplicant/otherIncome.ejs')%>
+        </div>
+        <hr class="other-commitment-line2" id="other-commitment-line2">
+        <p class="other-commitment-p2" id="other-commitment-p2" >Other Commitment</p>
+        <div class="othercommitment2">
+            <%- include('calculator_Path/2ndApplicant/otherCommitment.ejs')%>
+        </div>   
+    </div>
+
+    <!-- <div class="container5 floating-container">
+        <div class="floating-button">+</div>
+        <div class="element-container">
+            <a href="/redirect-to-calculator" target="_blank" class="item item-1 material-symbols-outlined" style="text-decoration: none;">calculate</a>
+            <a href="/redirect-to-blogging" target="_blank" class="item item-2 material-symbols-outlined" style="text-decoration: none;">rss_feed</a>
+            <a href="/redirect-to-form" target="_blank" class="item item-3 material-symbols-outlined" style="text-decoration: none;">export_notes</a>
+            <a href="/redirect-to-marketingmaterial" target="_blank" class="item item-4 material-symbols-outlined" style="text-decoration: none;">linked_services</a>
+        </div> -->
+        <!-- on and off button -->
+        <!-- <script>
+        document.querySelector('.floating-button').addEventListener("click", open);
+        function open(){
+            document.querySelector('.item-1').classList.toggle('box-active');
+            document.querySelector('.item-2').classList.toggle('box-active');
+            document.querySelector('.item-3').classList.toggle('box-active');
+            document.querySelector('.item-4').classList.toggle('box-active');
+        }
+        </script>
+    </div> -->
+
+    <script src="css/formCSS/globalDefined.js"></script>
+    <script src="css/formCSS/form-structure.js"></script>
+    <script src="css/formCSS/shortcut.js"></script>
+    <script src="css/formCSS/monthlyinstallment.js"></script>
+    <script src="css/formCSS/test123.js"></script>
+    <!-- MAIN APPLICANT -->
+    <script src="css/formCSS/group1stApplicant/epfAnalysis.js"></script>
+    <script src="css/formCSS/group1stApplicant/NiAnalysis.js"></script>
+    <script src="css/formCSS/group1stApplicant/bonusAnalysis.js"></script>
+    <script src="css/formCSS/group1stApplicant/otherincome.js"></script>
+    <script src="css/formCSS/group1stApplicant/othercommitment.js"></script>
+    <script src="css/formCSS/group1stApplicant/selfEmployment.js"></script>
+    <script src="css/formCSS/group1stApplicant/main-appicant-calculation.js"></script>
+    <!-- 2ND APPLICANT -->
+    <script src="css/formCSS/group2ndApplicant/epfAnalysis.js"></script>
+    <script src="css/formCSS/group2ndApplicant/NiAnalysis.js"></script>
+    <script src="css/formCSS/group2ndApplicant/bonusAnalysis.js"></script>
+    <script src="css/formCSS/group2ndApplicant/otherincome.js"></script>
+    <script src="css/formCSS/group2ndApplicant/othercommitment.js"></script>
+    <script src="css/formCSS/group2ndApplicant/selfEmployment.js"></script>
+    <script src="css/formCSS/group2ndApplicant/main-appicant-calculation.js"></script>
+    <script>
+        // Disable the right-click context menu
+        // document.addEventListener('contextmenu', (event) => event.preventDefault());
+        
+        document.addEventListener("blur", function (event) {
+            //format cell value
+            if(event.target.id==="other-income-factor-1"
+            ||event.target.id==="other-income-factor-2"
+            ||event.target.id==="other-income-factor-3"
+            ||event.target.id==="other-income-factor-4"
+            ||event.target.id==="other-income-factor-5"
+            ||event.target.id==="other-income-factor-6"
+            ||event.target.id==="other-income-factor-7"
+            ||event.target.id==="other-commitment-decimal-1"
+            ||event.target.id==="other-commitment-decimal-2"
+            ||event.target.id==="other-commitment-decimal-3"
+            ||event.target.id==="other-commitment-decimal-4"
+            ||event.target.id==="other-commitment-decimal-5"
+            ||event.target.id==="other-commitment-decimal-6"
+            ||event.target.id==="other-commitment-decimal-7"
+            ||event.target.id==="interest-rate"
+            ||event.target.id==="Bank-Statement-Factor"){
+                return
+            };
+            if(event.target.value.trim()==""){
+                event.target.value = "";
+            }else{
+                if(Number(event.target.value)){
+                    event.target.value = f(event.target.value.replace(/,/g,''));          
+                }else{
+                    event.target.value = event.target.value;
+                }
+            }
+        }, true);
+    
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,224 @@
+.self-employment {
+    /* display initially flex */
+    display: none;
+}
+#self-employment-line{
+    display: none;
+    width: calc(100%);
+}
+/* ====================================================================================================== */
+#income-tax-p{
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 0px;
+}
+.incometax-container {
+    display: flex;
+}
+    .income-tax-years {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+        .income-tax-years p{
+            margin-top: 15px;
+            line-height: 5px;
+        }
+        #income-tax-years-p1{
+            margin-top: 20px;
+        }
+    .incometax-amount-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: var(--result-margin-left);
+    }
+        .incometax-amount-container input{
+            padding: var(--input-size);
+            border-color: transparent;
+            width: calc(100%);
+        }
+.bank-statements-container {
+    display: flex;
+}
+#Share-ownership-p{
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 0px;
+}
+    .share-ownership {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+        .total-issued-capital {
+            margin-top: 15px;
+        }
+        .total-owned-capital {
+            margin-top: 15px;
+        }
+    .share-ownership-input-container {
+        display: flex;
+        margin-left: var(--result-margin-left);
+        flex-direction: column;
+        width: calc(100%/2);
+    }
+        .share-ownership-input-container input {
+            padding: var(--input-size);
+            border-color: transparent;
+            width: calc(100%/2);
+        }
+    .share-ownership-summary {
+        display: flex;
+        /* flex-direction: column; */
+        position: absolute;
+        /* background-color: aqua; */
+        top: 110px;
+        right: 0;
+        margin-right: 10px;
+        width: calc(100%/2);
+        height: 200px;
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 15px;
+    }
+        .shareownership-title {
+            display: flex;
+            flex-direction: column;
+            width: calc(100%);
+        }
+            .shareownership-title p{
+                line-height: 0px;
+            }
+        .shareownership-amount {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            width: calc(100%/2);
+        }
+            .shareownership-amount p{
+                line-height: 0px;
+            }
+.bank-statement-p{
+    margin: 30px 0 30px 10px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 0px;   
+}
+.bank-statement-1 {
+    display: flex;
+    margin-bottom: 15px;
+}
+    .bank-statement-1-months {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        /* background-color: aqua; */
+        width: calc(100%/6);
+    }
+        .bank-statement-1-months p{
+            margin-top: 15px;
+            line-height: 6px;
+        }
+        #bank-statement-1-months-1{
+            margin-top: 35px;
+        }
+    .bank-statement-1-amount-container {
+        margin-left: var(--result-margin-left);
+        display: flex;
+        flex-direction: column;
+    }
+        .bank-statement-1-amount-container input{
+            padding: var(--input-size);
+            border-color: transparent;
+            width: calc(100%);
+        }
+    .bank-statement-summmary-container-1 {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid white;
+        border-radius: 15px;
+        padding: 10px;
+        margin-right: 10px;
+        width: calc(100%/6);
+        margin-left: var(--result-margin-left);
+    }
+.bank-statement-2 {
+    display: flex;
+    margin-bottom: 15px;
+}
+    .bank-statement-2-months {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        /* background-color: aqua; */
+        width: calc(100%/4);
+    }
+        .bank-statement-2-months p{
+            margin-left: 10px;
+            margin-top: 15px;
+            line-height: 6px;
+        }
+        #bank-statement-2-months-1{
+            margin-top: 35px;
+        }
+    .bank-statement-2-amount-container {
+        margin-left: var(--result-margin-left);
+        display: flex;
+        flex-direction: column;
+    }
+        .bank-statement-2-amount-container input{
+            padding: var(--input-size);
+            border-color: transparent;
+            width: calc(100%);
+        }
+    .bank-statement-summmary-container-2 {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid white;
+        border-radius: 15px;
+        padding: 10px;
+        margin-right: 10px;
+        width: calc(100%/4);
+        margin-left: var(--result-margin-left);
+    }
+.bank-statement-3 {
+    display: flex;
+    margin-bottom: 15px;
+}
+    .bank-statement-3-months {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        /* background-color: aqua; */
+        width: calc(100%/6);
+    }
+    .bank-statement-3-months p{
+            margin-left: 10px;
+            margin-top: 15px;
+            line-height: 6px;
+        }
+        #bank-statement-3-months-1{
+            margin-top: 35px;
+        }
+    .bank-statement-3-amount-container {
+        margin-left: var(--result-margin-left);
+        display: flex;
+        flex-direction: column;
+    }
+        .bank-statement-3-amount-container input{
+            padding: var(--input-size);
+            border-color: transparent;
+            width: calc(100%);
+        }
+    .bank-statement-summmary-container-3 {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid white;
+        border-radius: 15px;
+        padding: 10px;
+        margin-right: 10px;
+        width: calc(100%/4);
+        margin-left: var(--result-margin-left);
+    }

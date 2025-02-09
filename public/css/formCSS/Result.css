@@ -1,0 +1,18 @@
+.mortgage-summary-and-analyzation{
+    display: flex;
+}
+    .mortgage-summary-and-analyzation-description{
+        display: flex;
+        flex-direction: column;
+    }
+        .mortgage-summary-and-analyzation-description p{
+            margin-top:0px;
+        }
+    .mortgage-summary-and-analyzation-result{
+        display: flex;
+        flex-direction: column;
+        margin-left:50px;
+    }
+        .mortgage-summary-and-analyzation-result p{
+            margin-top:0px;
+        }

@@ -1,0 +1,105 @@
+#other-commitment-p2{
+    display: none;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 0px;
+}
+#other-commitment-line2{
+    display: none;
+    width: calc(100%);
+
+}
+.othercommitment2{
+    display: none;
+}
+/* ======================================================================================================== */
+.other-commitment-container2{
+    width: calc(100%);
+    display: flex;
+}
+    .other-commitment-numbers{
+        display: flex;
+        flex-direction: column;
+        /* background-color: aqua; */
+    }
+        .other-commitment-numbers p{
+            line-height: 5px;
+        }
+            .other-commitment-numbers-p-1{
+                margin-top: 20px;
+            }
+    .other-commitment-description2{
+        margin-left: var(--result-margin-left);
+        display: flex;
+        flex-direction: column;
+        /* background-color: aquamarine; */
+        width: calc(100%)/4;
+    }
+        .other-commitment-description2 input{    
+            padding: var(--input-size);
+            border-color: transparent;
+            width: calc(100%);
+        }
+    .other-commitment-amount2{
+        margin-left: var(--result-margin-left);
+        display: flex;
+        flex-direction: column;
+        /* background-color: aquamarine; */
+        width: calc(100%)/6;
+    }
+        .other-commitment-amount2 input{
+            padding: var(--input-size);
+            border-color: transparent;
+            width: calc(100%);
+        }
+    .other-commitment-decimal2{
+        margin-top: 7px;
+        /* margin-left: var(--result-margin-left); */
+        display: flex;
+        flex-direction: column;
+        /* background-color: aquamarine; */
+        width: calc(100%/3);
+    }
+        #other-commitment-decimal-1{
+            margin-top:9px !important;
+        }
+        .other-commitment-decimal2 p{
+            margin-top: 2px !important;
+        }
+        .other-commitment-decimal-general{
+            margin:6.5px 0 6.5px 0;
+            line-height:14px;
+            padding: 5px 0 5px 0;
+            border-radius: 5px;
+            background-color: grey;
+            display: flex;
+            flex-direction: column;
+            height:24px;
+            width: calc(100%/1.1);
+            margin-left: var(--result-margin-left) !important;
+            text-align: center;
+        }
+    .net-other-commitment{
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        /* background-color: aquamarine; */
+        width: calc(100%/6);
+    }
+        .net-other-commitment-p1{
+            /* margin-top: 15px; */
+        }
+        .net-other-commitment-p{
+            margin-top: 18px;
+        }
+    .net-other-commitment-analysis2{
+        display: flex;
+        width: calc(100%/3.1);
+        margin: 10px 10px 0 10px;
+        border: 1px solid white;
+        border-radius: 15px;
+        padding: 10px;
+
+    }

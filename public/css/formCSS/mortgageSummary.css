@@ -1,0 +1,48 @@
+.mortgage-summary{
+    width: calc(100%);
+    display: flex;
+}
+    .loandetail-description{
+        display: flex;
+        flex-direction: column;
+        /* margin-left: var(--result-margin-left); */
+        margin-top: 0;
+        width: calc(100%/8);
+    }
+        .mortgage-loan-description{
+            margin-top: 15px;
+        }
+    .loandetail-amount{
+        display: flex;
+        flex-direction: column;
+        margin-left: var(--result-margin-left);
+        width: calc(100%/10);
+    }
+        .loandetail-amount input{
+            border-color: transparent;
+        }
+    .income-factors{
+        display: flex;
+        flex-direction: column;
+        margin-left: var(--result-margin-left);
+    }
+        .income-factor-description{
+            display: flex;
+            flex-direction: column;
+            width: calc(100%/8);
+            margin-left: var(--result-margin-left);
+        }   
+            .Variable-income-Factor-name{
+                margin-top: 15px;
+            }
+            .income-factor-description-layout{
+                margin-top:3px;
+            }
+        .income-factors{
+            width: calc(100%/10);
+        }
+            .income-factors input{
+                border-color: transparent;
+                width: calc(100%); 
+            }
+    
